@@ -1,0 +1,22 @@
+{
+  "name": "tooling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn sls invoke test --path test",
+    "dev": "serverless offline",
+    "start": "npx nodemon --exec npm run dev",
+    "offline": "npm run dev --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.10.1",
+    "serverless-localstack": "^0.4.35",
+    "serverless-offline": "^8.5.0"  
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1105.0",
+    "nodemon": "^2.0.15"
+  }
+  
+}
