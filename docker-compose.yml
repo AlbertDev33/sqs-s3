@@ -6,10 +6,8 @@ services:
     image: localstack/localstack-full
     network_mode: bridge
     ports:
-        # s3
+        # s3, sqs
       - "4566:4566"
-        # sqs
-      - "4576:4576"
       - "8080:8080"
     environment:
       - SERVICES=s3,sqs
@@ -34,7 +32,7 @@ services:
     environment:
         LOCALSTACK_HOST: localstack
         S3_PORT: 4566
-        SQS_PORT: 4576
+        SQS_PORT: 4566
 
 
 volumes:
